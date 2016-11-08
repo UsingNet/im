@@ -1,0 +1,69 @@
+  .error-tips {
+    display: none;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    background-color: #FFFADD;
+    margin-bottom: 10px;
+    color: #6E6C5F;
+    z-index: 100000;
+  }
+
+  input, textarea, button, select {
+    outline: none;
+  }
+
+  select {
+    width: 100%;
+    padding: 3px 5px;
+    height: 2.25em;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+
+  option {
+    padding: 3px;
+  }
+
+
+  input, textarea {
+    border: 1px solid #CCC;
+  }
+
+  textarea {
+    resize: none;
+    height: 80px;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #00A6ED;
+  }
+
+  input.error, textarea.error {
+    border-color: #E74C3C;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 3px;
+    color: #FFF;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: #62a8ea;
+  }
+
+
+  .form-item {
+    margin-bottom: 15px;
+    input {
+      width: 100%;
+      padding: 10px;
+    }
+    textarea  {
+      width: 100%;
+      padding: 8px;
+    }
+  }

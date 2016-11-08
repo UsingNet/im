@@ -1,0 +1,61 @@
+<div class="error-tips">
+</div>
+<div class="messages">
+</div>
+
+{{#if (setting.plan)}}
+  <div class="footer" style="height: 160px">
+{{else}}
+  <div class="footer">
+{{/if}}
+  <textarea class="editor" placeholder="{{ setting.input_placeholder }}"></textarea>
+  <div class="tools-bar">
+    <div class="tools">
+      <i class="fa fa-smile-o face"></i>
+      <i class="fa fa-image upload"></i>
+      <i class="fa fa-thumbs-up evaluate"></i>
+      <ul class="faces"></ul>
+      <input type="file" name="file" id="file">
+    </div>
+    <div class="submit">
+      <button id="submit" class="btn btn-primary" style="background-color: #{{ setting.title_bg_color }}">发送</button>
+    </div>
+  </div>
+  {{#if (!setting.plan)}}
+  <div class="copyright">
+    <a target="_blank" href="https://www.usingnet.com">优信科技提供技术支持</a>
+  </div>
+  {{/if}}
+</div>
+
+<!-- 评价 -->
+<div id="evaluate">
+  <div class="close">
+    <i class="fa fa-close"></i>
+  </div>
+  <div class="header">
+    请对我们的服务做出评价
+  </div>
+  <div class="levels">
+    <ul>
+      <li class="good selected">
+        <i></i>
+        <span>好评</span>
+      </li>
+      <li class="general">
+        <i></i>
+        <span>中评</span>
+      </li>
+      <li class="bad">
+        <i></i>
+        <span>差评</span>
+      </li>
+    </ul>
+  </div>
+  <div class="editor">
+    <textarea placeholder="请填写评价内容（选填）"></textarea>
+  </div>
+  <div class="submit">
+    <button class="btn btn-primary" style="background-color: #{{ setting.title_bg_color }}">提交</button>
+  </div>
+</div>

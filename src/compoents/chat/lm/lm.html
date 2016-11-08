@@ -1,0 +1,26 @@
+<form class="form" style="display: block">
+    <div class="error-tips" style="display: none">
+    </div>
+    <div class="form-item">
+        <input type="email" name="email" id="email" placeholder="您的邮箱"/>
+    </div>
+    <div class="form-item">
+        <input type="text" name="phone" id="phone" placeholder="您的手机号码" />
+    </div>
+    <div class="form-item">
+      <textarea name="content" id="content" placeholder="填写问题"></textarea>
+    </div>
+    <div class="submit">
+      <input id="submit" type="button" class="btn btn-primary" value="提交" style="background-color: #{{setting.title_bg_color}}"/>
+    </div>
+</form>
+
+<div class="success" style="display: none">
+    <div class="alert-dialog">
+        <div class="content">
+            <h3>留言提交成功</h3>
+            <p>客服稍后将联系您,请耐心等待</p>
+            <input id="reset" type="button" class="btn btn-primary" value="确定" style="background-color: #{{setting.title_bg_color}}"/>
+        </div>
+    </div>
+</div>

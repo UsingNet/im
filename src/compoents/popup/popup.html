@@ -1,0 +1,121 @@
+<div id="__USINGNET_HANDLE_UNREAD"></div>
+
+{{#if (setting.web.icon_shape === 'custom')}}
+<div class="__USINGNET_HANDLE_ICON">
+  <img src="{{ setting.web.customer_icon }}" />
+</div>
+{{else}}
+  <div class="__USINGNET_HANDLE_ICON __USINGNET_HANDLE_ICON_{{ setting.web.icon_shape.toUpperCase() }}" style="background-color: #{{ setting.web.title_bg_color }}">
+    <img id="__USINGNET_HANDLE_IMG" src="../../image/message.png" />
+    <p id="__USINGNET_HANDLE_TXT">
+      {{#if (!setting.online && setting.web.type === 'IM-LM')}}
+        离线留言
+      {{else}}
+        在线咨询
+      {{/if}}
+    </p>
+  </div>
+{{/if}}
+
+<style>
+#__USINGNET_HANDLE {
+  position: fixed;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2147483647;
+  color: #FFF;
+  font-size: 12px;
+}
+#__USINGNET_HANDLE_TXT {
+  padding: 0;
+  margin: 0;
+}
+#__USINGNET_HANDLE_UNREAD {
+  display: none;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 20px;
+  background: #FF3300;
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFF;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+}
+
+#__USINGNET_HANDLE #__USINGNET_HANDLE_IMG {
+  width: 20px;
+}
+.__USINGNET_HANDLE_ICON_BAR {
+  width: 35px;
+  height: 140px;
+  border-radius: 17px;
+  padding-top: 17px;
+  display: block;
+  overflow: hidden;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .12);
+}
+.__USINGNET_HANDLE_ICON_BAR #__USINGNET_HANDLE_TXT {
+  padding: 0 11px;
+  text-indent: 0;
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.__USINGNET_HANDLE_ICON_SQUARE {
+  width: 60px;
+  height: 60px;
+  font-size: 12px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .12);
+}
+.__USINGNET_HANDLE_ICON_SQUARE #__USINGNET_HANDLE_IMG {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  width: 25px;
+}
+.__USINGNET_HANDLE_ICON_CIRCULAR {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  font-size: 12px;
+  box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+}
+.__USINGNET_HANDLE_ICON_CIRCULAR #__USINGNET_HANDLE_IMG {
+  margin-top: 10px;
+  margin-bottom: 5px
+}
+
+#__USINGNET_HANDLE_ICON_CIRULAR {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  font-size: 12px;
+  box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+}
+#__USINGNET_HANDLE_ICON_CIRULAR #__USINGNET_HANDLE_IMG {
+  margin-top: 10px;
+}
+#__USINGNET_CHAT {
+  display: none;
+  position: fixed;
+  padding: 0;
+  bottom: 0px;
+  right: 80px;
+  width: 350px;
+  height: 460px;
+  z-index: 2147483646;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+  overflow: hidden;
+}
+#__USINGNET_CHAT_IFRAME {
+  width: 100%;
+  height: 100%;
+}
+#__USINGNET_HANDLE_INVITE {
+
+}
+</style>

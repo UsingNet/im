@@ -1,0 +1,42 @@
+#header {
+  height: 50px;
+  color: #FFF;
+  display: inline-block;
+  width: 100%;
+  .logo {
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 35px;
+    height: 35;
+    border-radius: 35px;
+    float: left;
+  }
+  .info {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 5px;
+    .name {
+      font-weight: normal;
+    }
+  }
+  .pull-right {
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    a {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+  #minimize {
+    color: #fdfdfd;
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+  }
+  .info {
+    padding: 5px;
+  }
+}

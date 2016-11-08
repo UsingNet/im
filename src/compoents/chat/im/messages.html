@@ -1,0 +1,32 @@
+<div class="messages-wrap">
+  {{#each (messages)}}
+    <div class="item {{ this.direction.toLowerCase() }} {{ this.type.toLowerCase() }}">
+      {{#if (this.type === 'SYSTEM')}}
+        <div class="text">{{ this.body }}</div>
+      {{else}}
+        <div class="name">
+          {{#if (this.direction === 'SEND')}}
+            {{ this.package.agent.name }}
+          {{/if}}
+          <span class="time">{{ this.created_at }}</span>
+        </div>
+
+        {{#if (this.type === 'image')}}
+          <div class="image">
+            {{{ this.body }}}
+          </div>
+        {{elseif (this.direction === 'SEND')}}
+          <div class="bubble" style="background-color: #{{setting.title_bg_color}}">
+            <div class="arrow" style="background-color: #{{setting.title_bg_color}};"></div>
+            {{{ body }}}
+          </div>
+        {{else}}
+          <div class="bubble">
+            <div class="arrow"></div>
+            {{{ body }}}
+          </div>
+        {{/if}}
+      {{/if}}
+    </div>
+  {{/each}}
+</div>

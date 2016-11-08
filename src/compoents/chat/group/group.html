@@ -1,0 +1,10 @@
+<p>请选择客服组：</p>
+<ul>
+  {{#each (groups)}}
+    <li>
+      <a class="group" data-id={{this.id}}>
+        {{this.name}}
+      </a>
+    </li>
+  {{/each}}
+</ul>

@@ -1,0 +1,31 @@
+html, body, h1, h2, h3, h4, h5, div, ul, li, a, form, input, textarea, button, fieldset, legend {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
+
+html, body, #view {
+  height: 100%;
+  font-size: 14px;
+}
+
+#view {
+  overflow: hidden;
+  position: relative;
+  background: #FFF;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+}

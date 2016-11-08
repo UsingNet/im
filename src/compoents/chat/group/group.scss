@@ -1,0 +1,26 @@
+#group {
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  bottom: 0;
+  background-color: #F3F3F3;
+  padding: 20px;
+  z-index: 1000;
+  .submit {
+    button {
+      width: 100%;
+    }
+  }
+  ul {
+    margin-bottom: 20px;
+    li {
+      a {
+        display: block;
+        padding: 10px;
+        background: #fff;
+        border-bottom: 1px solid #f3f3f3;
+        cursor: pointer;
+      }
+    }
+  }
+}

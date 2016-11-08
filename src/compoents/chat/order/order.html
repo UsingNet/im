@@ -1,0 +1,42 @@
+  <div class="error-tips">
+  </div>
+  <div class="wrap">
+    <div class="header">
+      <div class="title">
+        请选择您遇到的问题
+      </div>
+      <select name="" id="">
+        <option value="">选择问题</option>
+        {{#each (orders)}}
+          <option value="{{this.title}}">{{this.title}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="orders" style="display: none">
+      {{#each (orders)}}
+          <form class="order" style="display: none">
+            {{#each (this.items)}}
+                {{#if (this.type === 'input')}}
+                  <div class="form-item">
+                    <input name={{this.placeholder}} placeholder="{{this.placeholder}}" />
+                  </div>
+                {{else}}
+                  <div class="form-item">
+                    <textarea name={{this.placeholder}} placeholder="{{this.placeholder}}"></textarea>
+                  </div>
+                {{/if}}
+            {{/each}}
+          </form>
+      {{/each}}
+      <div class="submit">
+        <button id="submit" class="btn btn-primary" style="background-color: #{{setting.title_bg_color}}">提交</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="success">
+    <h3>提交成功</h3>
+    <p>
+      <button id="reset" class="btn btn-primary" style="background-color: #{{setting.title_bg_color}}">进入对话</button>
+    </p>
+  </div>
